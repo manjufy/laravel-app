@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Listing;
 use Illuminate\Support\Facades\Route;
 use App\Models\Post;
 use Illuminate\Http\Request;
@@ -27,4 +28,19 @@ Route::get('search', function(Request $request) {
   $queries = $request->query;
 
   return print_r($queries, true);
+});
+
+// Listings
+Route::get('listings', function() {
+  return view('listings', [
+    'heading' => 'Job Listings',
+    'listings' => Listing::all(),
+  ]);
+});
+
+Route::get('listings/{id}', function($id) {
+  return view('listing', [
+    'heading' => 'Job',
+    'data' => Listing::find($id),
+  ]);
 });
