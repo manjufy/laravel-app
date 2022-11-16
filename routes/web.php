@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Post;
+use Illuminate\Http\Request;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +22,9 @@ Route::get('/', function () {
 Route::get('posts/{post}', function ($slug) {
   return view('post', ['post' => Post::find($slug)]);
 })->where('post', '[A-z_\-]+');
+ 
+Route::get('search', function(Request $request) {
+  $queries = $request->query;
+
+  return print_r($queries, true);
+});
