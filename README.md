@@ -6,8 +6,8 @@ Simple Laravel app
 
     Make sure you have sail installed: https://laravel.com/docs/9.x/sail
 
-    ```
+    
     git clone git@github.com:manjufy/laravel-app.git
     cd laravel-app>
     $ laravel-app>sail up
-    ```
+    
