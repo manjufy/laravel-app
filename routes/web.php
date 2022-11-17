@@ -33,7 +33,6 @@ Route::get('search', function(Request $request) {
 // Listings
 Route::get('/', function() {
   return view('listings', [
-    'heading' => 'Job Listings',
     'listings' => Listing::all(),
   ]);
 });
