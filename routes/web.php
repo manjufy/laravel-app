@@ -16,7 +16,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/', function () {
+Route::get('/posts', function () {
   return view('posts', [ 'posts' => Post::all()]);
 });
 
@@ -31,16 +31,15 @@ Route::get('search', function(Request $request) {
 });
 
 // Listings
-Route::get('listings', function() {
+Route::get('/', function() {
   return view('listings', [
     'heading' => 'Job Listings',
     'listings' => Listing::all(),
   ]);
 });
 
-Route::get('listings/{id}', function($id) {
+Route::get('listings/{listing}', function(Listing $listing) {
   return view('listing', [
-    'heading' => 'Job',
-    'data' => Listing::find($id),
+    'data' => $listing,
   ]);
 });
