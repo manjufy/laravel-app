@@ -1,6 +1,4 @@
-@extends('layout')
-
-@section('content')
+<x-layout>
 @include('partials._search')
     @unless (empty($data))
     <a href="/" class="inline-block text-black ml-4 mb-4">
@@ -54,4 +52,4 @@
     @else
         <p>Not found</p>
     @endunless
-@endsection
+</x-layout>

@@ -17,6 +17,15 @@ use Illuminate\Http\Request;
 |
 */
 
+// Common Resource Routes:
+// index - Show all
+// show - show single
+// create - Show form to create new {resource}
+// store - Store new listing
+// edit - Show form to edit {resource}
+// update - Update resource
+// destroy - Deleting resource
+
 // Listings
 Route::get('/', [ListingController::class, 'index']);
 Route::get('listings/{listing}', [ListingController::class, 'show']);
@@ -35,12 +44,3 @@ Route::get('search', function(Request $request) {
 
   return print_r($queries, true);
 });
-
-// Common Resource Routes:
-// index - Show all
-// show - show single
-// create - Show form to create new {resource}
-// store - Store new listing
-// edit - Show form to edit {resource}
-// update - Update resource
-// destroy - Deleting resource

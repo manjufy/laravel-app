@@ -41,6 +41,8 @@ Once you have sail up and running use some of the following useful commands for 
 
 ## Learnings
 
+- Eloquent: Query Scopes
+
 
 ## Reference
 
