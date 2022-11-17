@@ -22,16 +22,18 @@ Make sure you have sail installed: https://laravel.com/docs/9.x/sail
 git clone [git@github.com:manjufy/laravel-app.git](https://github.com/manjufy/laravel-app.git)
     
 
-    // Option 1
     cd laravel-app>
-    $ laravel-app>sail up // to start
-    $ laravel-app> docker compose exec laravel.test php artisan migrate:refresh --seed // to create migration and seed data
-    $ laravel-app>sail down // to stop
+    $ laravel-app > mv .env.example .env
+
+    // Option 1
+    $ laravel-app > sail up // to start
+    $ laravel-app > docker compose exec laravel.test php artisan migrate:refresh --seed // to create migration and seed data
+    $ laravel-app >sail down // to stop
 
     // Option 2
-    $ laravel-app>make start // to start
-    $ laravel-app>make migrate // to migrate and seed the data
-    $ laravel-app>make stop // to stop
+    $ laravel-app > make start // to start
+    $ laravel-app > make migrate // to migrate and seed the data
+    $ laravel-app > make stop // to stop
 
 
     Navigate to http://localhost
