@@ -6,9 +6,14 @@ Tutorial reference: https://www.youtube.com/watch?v=MYyJ4PuL4pY
 
 ## What can you learn
  - Setting up laravel with sail
- - Simple app
+ - Simple Job listing app
+   - Login
+   - Registration
+   - Listings
+   - Basic Authentication and Authorisation
  - Migrations and seeding
  - Running the app with sail
+ - Simple make file to simply the running process
 
 ## Setting up and Running
 
