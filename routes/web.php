@@ -28,21 +28,27 @@ use Illuminate\Http\Request;
 
 // Listings
 Route::get('/', [ListingController::class, 'index']);
+
+Route::get('/listings/create', [ListingController::class, 'create']);
 Route::post('/listings', [ListingController::class, 'store']);
-Route::get('listings/create', [ListingController::class, 'create']);
+
+Route::get('/listings/{listing}/edit', [ListingController::class, 'edit']);
+Route::put('/listings/{listing}', [ListingController::class, 'update']);
+
+
 Route::get('listings/{listing}', [ListingController::class, 'show']);
 
 // miscellaneous
-Route::get('/posts', function () {
-  return view('posts', [ 'posts' => Post::all()]);
-});
+// Route::get('/posts', function () {
+//   return view('posts', [ 'posts' => Post::all()]);
+// });
 
-Route::get('posts/{post}', function ($slug) {
-  return view('post', ['post' => Post::find($slug)]);
-})->where('post', '[A-z_\-]+');
+// Route::get('posts/{post}', function ($slug) {
+//   return view('post', ['post' => Post::find($slug)]);
+// })->where('post', '[A-z_\-]+');
  
-Route::get('search', function(Request $request) {
-  $queries = $request->query;
+// Route::get('search', function(Request $request) {
+//   $queries = $request->query;
 
-  return print_r($queries, true);
-});
+//   return print_r($queries, true);
+// });

@@ -25,7 +25,7 @@
                 },
             };
         </script>
-        <title>LaraGigs | Find Laravel Jobs & Projects</title>
+        <title>Laravel App | Find Laravel Jobs & Projects</title>
     </head>
     <x-flash-message />
     <body class="mb-48">
