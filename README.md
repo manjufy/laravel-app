@@ -20,9 +20,10 @@ Tutorial reference: https://www.youtube.com/watch?v=MYyJ4PuL4pY
 Make sure you have sail installed: https://laravel.com/docs/9.x/sail
 
 git clone [git@github.com:manjufy/laravel-app.git](https://github.com/manjufy/laravel-app.git)
-    cd laravel-app>
+    
 
     // Option 1
+    cd laravel-app>
     $ laravel-app>sail up // to start
     $ laravel-app> docker compose exec laravel.test php artisan migrate:refresh --seed // to create migration and seed data
     $ laravel-app>sail down // to stop
