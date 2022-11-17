@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ListingController;
 use App\Models\Listing;
 use Illuminate\Support\Facades\Route;
 use App\Models\Post;
@@ -16,6 +17,11 @@ use Illuminate\Http\Request;
 |
 */
 
+// Listings
+Route::get('/', [ListingController::class, 'index']);
+Route::get('listings/{listing}', [ListingController::class, 'show']);
+
+// miscellaneous
 Route::get('/posts', function () {
   return view('posts', [ 'posts' => Post::all()]);
 });
@@ -30,15 +36,11 @@ Route::get('search', function(Request $request) {
   return print_r($queries, true);
 });
 
-// Listings
-Route::get('/', function() {
-  return view('listings', [
-    'listings' => Listing::all(),
-  ]);
-});
-
-Route::get('listings/{listing}', function(Listing $listing) {
-  return view('listing', [
-    'data' => $listing,
-  ]);
-});
+// Common Resource Routes:
+// index - Show all
+// show - show single
+// create - Show form to create new {resource}
+// store - Store new listing
+// edit - Show form to edit {resource}
+// update - Update resource
+// destroy - Deleting resource
