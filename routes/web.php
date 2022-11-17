@@ -28,6 +28,8 @@ use Illuminate\Http\Request;
 
 // Listings
 Route::get('/', [ListingController::class, 'index']);
+Route::post('/listings', [ListingController::class, 'store']);
+Route::get('listings/create', [ListingController::class, 'create']);
 Route::get('listings/{listing}', [ListingController::class, 'show']);
 
 // miscellaneous
