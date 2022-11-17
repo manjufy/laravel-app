@@ -16,6 +16,7 @@ Tutorial reference: https://www.youtube.com/watch?v=MYyJ4PuL4pY
  - Simple make file to simply the running process
  - Eloquent: Query Scopes
  - Clockwork extension
+ - Tinker
 
 ## Setting up and Running
 
