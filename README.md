@@ -1,14 +1,34 @@
 ## Laravel App
 
-Simple Laravel app
+Simple Laravel app. This app was implemented based on the tutorial from [Traversy Media](https://www.youtube.com/@TraversyMedia)
+
+Tutorial reference: https://www.youtube.com/watch?v=MYyJ4PuL4pY
+
+## What can you learn
+ - Setting up laravel with sail
+ - Simple app
+ - Migrations and seeding
+ - Running the app with sail
 
 ## Setting up and Running
 
     Make sure you have sail installed: https://laravel.com/docs/9.x/sail
 
-    git clone git@github.com:manjufy/laravel-app.git
+    git clone [git@github.com:manjufy/laravel-app.git](https://github.com/manjufy/laravel-app.git)
     cd laravel-app>
-    $ laravel-app>sail up
+    // Option 1
+    $ laravel-app>sail up // to start
+    $ laravel-app> docker compose exec laravel.test php artisan migrate:refresh --seed // to create migration and seed data
+    $ laravel-app>sail down // to stop
+
+    // Option 2
+    $ laravel-app>make start // to start
+    $ laravel-app>make migrate // to migrate and seed the data
+    $ laravel-app>make stop // to stop
+
+
+    Navigate to http://localhost
+    Login with username:manju@manju.dev, password:password
 
 ## Commands
 
