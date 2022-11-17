@@ -39,6 +39,9 @@ Once you have sail up and running use some of the following useful commands for 
     // To refresh and migrate 
     docker compose exec laravel.test php artisan migrate:refresh --seed
 
+    // Images inside storage/app/public are not publicly accessible, to do so
+    docker compose exec laravel.test php artisan storage:link
+
 ## Learnings
 
 - Eloquent: Query Scopes
