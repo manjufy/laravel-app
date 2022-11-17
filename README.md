@@ -14,6 +14,8 @@ Tutorial reference: https://www.youtube.com/watch?v=MYyJ4PuL4pY
  - Migrations and seeding
  - Running the app with sail
  - Simple make file to simply the running process
+ - Eloquent: Query Scopes
+ - Clockwork extension
 
 ## Setting up and Running
 
@@ -70,12 +72,6 @@ Once you have sail up and running use some of the following useful commands for 
 
     // Images inside storage/app/public are not publicly accessible, to do so
     docker compose exec laravel.test php artisan storage:link
-
-## Learnings
-
-- Eloquent: Query Scopes
-- Clockwork extension
-
 
 ## Reference
 
