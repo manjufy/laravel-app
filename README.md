@@ -20,7 +20,7 @@ Tutorial reference: https://www.youtube.com/watch?v=MYyJ4PuL4pY
 
 ## Setting up and Running
 
-Make sure you have sail installed: https://laravel.com/docs/9.x/sail
+Make sure you have sail installed: https://laravel.com/docs/9.x/sail or Run `composer install` if you already have composer installed.
 
 git clone [git@github.com:manjufy/laravel-app.git](https://github.com/manjufy/laravel-app.git)
     
