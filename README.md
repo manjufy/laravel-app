@@ -74,6 +74,9 @@ Once you have sail up and running use some of the following useful commands for 
     // Images inside storage/app/public are not publicly accessible, to do so
     docker compose exec laravel.test php artisan storage:link
 
+    // To update composer
+    composer selfupdate
+
 ## Reference
 
     Mysql Cheatsheet: https://gist.github.com/bradtraversy/c831baaad44343cc945e76c2e30927b3
