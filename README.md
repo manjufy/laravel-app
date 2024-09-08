@@ -26,7 +26,7 @@ git clone [git@github.com:manjufy/laravel-app.git](https://github.com/manjufy/la
     
 
     cd laravel-app>
-    $ laravel-app > mv .env.example .env
+    $ laravel-app > cp .env.example .env
 
     // Option 1
     $ laravel-app > sail up // to start
